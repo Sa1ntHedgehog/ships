@@ -36,10 +36,18 @@ document.getElementById('search').addEventListener('keyup', function () {//funct
         }
     };
 });
-/* document.getElementById('ships').addEventListener('click', function (e) {
-    e.target.style.backgroundColor = "green";
-    e.target.style.transition = "all .3s";
-}); */
+document.getElementById('ships').addEventListener('click', function (e) {
+    var selectedShips = []
+    if (e.target.id != "ships") {
+        e.target.classList.toggle('highlight');
+        e.target.style.transition = "all .3s";
+        if (e.target.classList == "highlight") {
+            selectedShips.push(e.target.id);
+        }
+        else { selectedShips.slice(selectedShips.indexOf(e.target.id),1); }
+    }
+    showInSideBar(selectedShips);
+});
 function clearScreen() {
     document.getElementById('ships').textContent = '';
 }
@@ -121,11 +129,19 @@ function showShips(jsonObj) {
         element.classList.add("ship");
         element.setAttribute("id", jsonObj[i].title);
         var title = document.createElement('h3');
+        var level = document.createElement('span');
         var nation = document.createElement('span');
         nation.textContent = jsonObj[i].nation;
+        level.textContent = jsonObj[i].level;
         title.textContent = jsonObj[i].title;
         element.appendChild(title);
+        element.appendChild(level);
         element.appendChild(nation);
         shipsContainer.appendChild(element);
     }
 }
+/* function showInSideBar(array)
+{
+    selectedShips=array;
+
+} */
