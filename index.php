@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="container__row">
+                <div class="container__row__left">
+                    <div class="container__row__left__search">
+                        <input type="text" placeholder="Найти корабль..." class="w-100" id="search">
+                    </div>
+                    <div class="container__row__left__filters">
+                        <select name="nation" id="nation" class="w-100">
+                            <option value="Нация">Нация</option>
+                        </select>
+                        <select name="type" id="type" class="w-100">
+                            <option value="Класс">Класс</option>
+                        </select>
+                        <select name="level" id="level" class="w-100">
+                            <option value="Уровень">Уровень</option>
+                        </select>
+                    </div>
+                    <div id="ships" class="container__row__left__wrapper_ships">
+
+                    </div>
+                </div>
+                <div class="container__row__right">
+                    <h3>Выбранные корабли</h3>
+                    <div id="selected_ships">
+                    </div>
+                    <h4>Сумма уровней</h4>
+                    <div id="ships_level"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,92 @@
+:root{
+    --bg-card-gray:rgb(156 156 156 / 90%);
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .05em;
+    font-weight: 500;
+}
+.container-fluid
+{
+    background-image: url("https://image.api.playstation.com/vulcan/img/rnd/202106/0414/u5PSfLMvBeFqO3bHSbSlE9mg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 34rem;
+}
+.container
+{
+    width:100%;
+    max-width: 1378px;
+    margin:0 auto;
+}
+.container__row
+{
+    display: flex;
+}
+
+.container__row__left
+{
+    max-width:75%;
+    width: 100%;
+    padding:0 15px;
+}
+.container__row__left__search
+{
+    padding: 15px 0 0 10px;
+}
+.container__row__left__filters
+{
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top:15px;
+}
+.container__row__left__filters select
+{
+    padding: 5px 15px;
+    border-style: none;
+    border:0;
+    width: 30%;
+    margin:0 8px;
+}
+.container__row__left__wrapper_ships
+{
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-height: 768px;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+.container__row__left__wrapper_ships .ship
+{
+    background-color: var(--bg-card-gray);
+    color: white;
+    width: 30%;
+    height: 100%;
+    max-height: 150px;
+    padding:0 15px;
+    margin:10px;
+}
+.container__row__right
+{
+    max-width: 25%;
+    width: 100%;
+    padding:0 15px;
+}
+.w-100
+{
+    width:100%;
+}
+#search
+{
+    border-style: none;
+    border: 0;
+    padding: 5px 15px;
+}
