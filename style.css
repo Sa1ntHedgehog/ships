@@ -69,10 +69,13 @@ body
     background-color: var(--bg-card-gray);
     color: white;
     width: 30%;
-    height: 100%;
-    max-height: 150px;
+    height: 150px;
     padding:0 15px;
     margin:10px;
+}
+.container__row__left__wrapper_ships .ship span
+{
+    margin-right:10px;
 }
 .container__row__right
 {
@@ -89,4 +92,8 @@ body
     border-style: none;
     border: 0;
     padding: 5px 15px;
+}
+.highlight
+{
+    background-color:green!important;
 }
