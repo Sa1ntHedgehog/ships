@@ -10,6 +10,10 @@ body
     letter-spacing: .05em;
     font-weight: 500;
 }
+h3,h4,#ships_level
+{
+    color:white;
+}
 .container-fluid
 {
     background-image: url("https://image.api.playstation.com/vulcan/img/rnd/202106/0414/u5PSfLMvBeFqO3bHSbSlE9mg.png");
@@ -59,10 +63,17 @@ body
     flex-wrap: wrap;
     overflow: hidden;
     width: 100%;
-    height: 100%;
     max-height: 768px;
     overflow-y: scroll;
     scroll-behavior: auto;
+}
+.container__row__right__wrapper_ships
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 550px;
 }
 .container__row__left__wrapper_ships .ship
 {
@@ -73,7 +84,16 @@ body
     padding:0 15px;
     margin:10px;
 }
-.container__row__left__wrapper_ships .ship span
+.container__row__right__wrapper_ships .ship
+{
+    background-color: var(--bg-card-gray);
+    color: white;
+    width: 100%;
+    height: 150px;
+    padding:0 15px;
+    margin:10px 0;
+}
+.container__row__left__wrapper_ships .ship span,.container__row__right__wrapper_ships .ship span
 {
     margin-right:10px;
 }
